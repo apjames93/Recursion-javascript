@@ -37,6 +37,7 @@ LinkedList.prototype.add = function(value) {
 };
 function findLastNode(node){
   // if we are at the end or if next is null return
+  //this is to check the state for the recursion
   if(!node.next){
     return node ;
   }
