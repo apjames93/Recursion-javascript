@@ -10,7 +10,7 @@ function Node(data) {
 function LinkedList() {
   //keeps track of the linkedlist and it starts at 0
     this.length = 0;
-    //the last head is = to null 
+    //the last head is = to null
     this.head = null;
 }
 //makes a new node
@@ -28,7 +28,9 @@ LinkedList.prototype.add = function(value) {
     }
 
     // TODO change while loop to recursion
-
+    // while (currentNode.next) {
+    //     currentNode = currentNode.next;
+    // }
     curentNode = findLastNode(curentNode);
 
     currentNode.next = node;
@@ -38,6 +40,7 @@ function findLastNode(node){
   if(!node.next){
     return node ;
   }
+  // call the function findLastNode and pass in next so it will go to the next node
   return findLastNode(node.next);
 }
 
